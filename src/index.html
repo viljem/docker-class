@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDev Studios - Desarrollo de Videojuegos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0a1e3e 0%, #1a3a6f 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #64b5f6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a3a6f 0%, #2e5da6 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background-color: #64b5f6;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #42a5f5;
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            background-color: #f5f9ff;
+        }
+
+        .services h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #0a1e3e;
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(10, 30, 62, 0.1);
+            border-top: 4px solid #2e5da6;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h4 {
+            color: #1a3a6f;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #0a1e3e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎮 GameDev Studios</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>Creamos Mundos Increíbles</h2>
+        <p>Desarrollo de videojuegos de última generación con tecnología punta y creatividad sin límites.</p>
+        <button class="btn">Comienza tu Proyecto</button>
+    </section>
+
+    <section class="services" id="servicios">
+        <h3>Nuestros Servicios</h3>
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Desarrollo 3D</h4>
+                <p>Creamos experiencias visuales inmersivas con gráficos de última generación.</p>
+            </div>
+            <div class="service-card">
+                <h4>Game Design</h4>
+                <p>Diseño creativo y narrativa cautivadora que engancha a los jugadores.</p>
+            </div>
+            <div class="service-card">
+                <h4>Programación</h4>
+                <p>Código optimizado y robusto para un rendimiento excepcional.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2024 GameDev Studios. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
