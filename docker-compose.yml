@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   php-apache:
-    image: php:8.2-apache
+    build: .                          # usa el Dockerfile local (instala mysqli)
     container_name: lamp-web
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html        # tu código aquí
+      - ./src:/var/www/html           # tu código PHP aquí
     depends_on:
       - mysql
 
@@ -15,6 +15,7 @@ services:
     image: mysql:8
     container_name: lamp-db
     restart: unless-stopped
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: mi_app
@@ -24,6 +25,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./BD:/docker-entrypoint-initdb.d  # ejecuta schema.sql al iniciar por primera vez
 
   phpmyadmin:
     image: phpmyadmin
